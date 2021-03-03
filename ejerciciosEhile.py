@@ -5,7 +5,7 @@ valor = True
 while valor:
     nro = 0
     newNro = int(input("Ingresa un numero más elevado: "))
-    
+
     if newNro < num:
         print("Ingresaste un numero menor. Saliste.")
         break;

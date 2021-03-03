@@ -1,23 +1,61 @@
 class Coche(): #Clase
-    largoChasis=250
-    anchoChasis=120
-    ruedas=4
-    enMarcha=False #Vehiculo detenido
+    def __init__(self): #constructor
+        self.__largoChasis = 250 #propiedades
+        self.__anchoChasis = 120
+        self.__ruedas = 4
+        self.__enMarcha = False  # Vehiculo detenido
 
-    def arrancar(self):
-        self.enMarcha=True # encendemos el coche
-    
-    def estado(self):
-        if(self.enMarcha):
+    def arrancar(self, arrancamos):
+        self.__enMarcha=arrancamos # encendemos el coche
+        
+        if(self.__enMarcha):
+            chequeo = self.chequeo_interno()
+            
+        if(self.__enMarcha and chequeo):
             return "El coche esta en marcha"
+        
+        elif(self.__enMarcha and chequeo == False):
+            return "Algo a ido mal en el chequeo. No podemos arrancar."
+        
         else:
             return "El coche esta apagado"
 
 
-miCoche=Coche() #Instanciar una clase.
+    def estado(self):
+        print("El coche tiene ", self.__ruedas, "ruedas. Un ancho de ", self.__anchoChasis, " y un largo de ", self.__largoChasis)
 
-print("El largo del Chasis es: ", miCoche.largoChasis)
-print("El coche tiene: ", miCoche.ruedas, " ruedas")
-miCoche.arrancar() #Al llamar al metodo, la funcion cambia su valor - Arrancamos el coche  
-print("Antes de ver el estado del coche, lo encedimos al llamar el metodo anterior")
-print(miCoche.estado())
+    def chequeo_interno(self):
+        print("Realizando chequeo interno.")
+        
+        self.gasolina = "ok"
+        self.aceite = "mal"
+        self.puertas = "cerradas"
+        
+        if (self.gasolina == "ok" and self.aceite == "ok" and self.puertas == "cerradas"):
+            
+            return True
+        
+        else:
+            
+            return False
+        
+            
+miCoche=Coche() #Instanciar una clase.
+#Accedemos a las propiedades de la clase
+
+print(miCoche.arrancar(True)) #Al llamar al metodo, la funcion cambia su valor - Arrancamos el coche  
+# Antes de ver el estado del coche, lo encedimos al llamar el metodo anterior")
+
+miCoche.estado()
+
+#Clase/video 27
+
+print("----------------- A continuacion creamos el segundo objeto -----------------")
+
+miCoche2=Coche() #instanciar clase
+
+print(miCoche2.arrancar(False))
+
+miCoche2.estado()
+
+
