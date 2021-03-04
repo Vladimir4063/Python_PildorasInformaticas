@@ -9,7 +9,7 @@ class Coche(): #Clase
         self.__enMarcha=arrancamos # encendemos el coche
         
         if(self.__enMarcha):
-            chequeo = self.chequeo_interno()
+            chequeo = self.__chequeo_interno()
             
         if(self.__enMarcha and chequeo):
             return "El coche esta en marcha"
@@ -24,11 +24,11 @@ class Coche(): #Clase
     def estado(self):
         print("El coche tiene ", self.__ruedas, "ruedas. Un ancho de ", self.__anchoChasis, " y un largo de ", self.__largoChasis)
 
-    def chequeo_interno(self):
+    def __chequeo_interno(self):
         print("Realizando chequeo interno.")
         
         self.gasolina = "ok"
-        self.aceite = "mal"
+        self.aceite = "ok"
         self.puertas = "cerradas"
         
         if (self.gasolina == "ok" and self.aceite == "ok" and self.puertas == "cerradas"):
