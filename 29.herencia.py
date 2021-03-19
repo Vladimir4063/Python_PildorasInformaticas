@@ -31,7 +31,7 @@ class Furgoneta(Vehiculos):
             return "La furgoneta no está cargada"
 
 
-class Moto(Vehiculos): #Si no heredamos de la clase "Vehiculos", daria error.
+class Moto(Vehiculos): #Heredamos de la clase "Vehiculos", sino daria error.
     
     hCaballito = ""
     def caballito(self):
