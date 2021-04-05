@@ -34,3 +34,4 @@ print(isinstance(Antonio, Persona)) # isinstance nos permite validar si pertenec
 
 print(isinstance(Antonio, Empleado))  # seria caso False, si no estaria heredando a travez del "super" a "Persona"
 
+print(issubclass(Empleado,Persona)) #Verificamos si es subclase del segundo parametro
