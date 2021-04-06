@@ -6,4 +6,5 @@ from funciones_matematicas import restar, sumar, multiplicar # Si ponemos * impo
 restar(40,10)
 
 sumar(20,20)
+
 multiplicar(2,30)
