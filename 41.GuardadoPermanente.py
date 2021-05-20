@@ -16,7 +16,7 @@ class ListaPersonas:
     #constructor de archivo
     def __init__(self):
         listaDePersonas = open("ficheroExterno", "ab+")
-        listaDePersonas.seek(0) #Volvemos el cursos al principio para lectura completa
+        listaDePersonas.seek(0) #Volvemos el cursor al principio para lectura completa
 
         try: #En caso de que encuentre la lista VACIA.
              
