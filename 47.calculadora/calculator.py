@@ -46,7 +46,7 @@ def suma(num):
     numeroPantalla.set(resultado)
 
 #------------- restar ---------------#
-    
+#NO TERMINADO
 def resta(num):
     global operacion
     global resultado
@@ -55,8 +55,20 @@ def resta(num):
     operacion = "resta"
     numeroPantalla.set(resultado)
 
-#------------- restar ---------------#
+#------------- multi ---------------#
+#NO TERMINADO
+def multi(num):
+    global operacion
+    global resultado
 
+    resultado1 = int(num)
+    operacion = "multi"
+    resultado = int(numeroPantalla.get()) * resultado1
+
+    numeroPantalla.set(resultado) #Envio resultado a pantalla
+
+#------------- limpiar pantalla ---------------#
+#NO TERMINADO
 def limpiarPantalla():
     pantalla.delete(0, END)
 
@@ -104,7 +116,7 @@ btDiv.grid(row=3, column=4)
 bt4 = Button(miFrame, text="4", width=3, command=lambda:numeroPulsado("4"))
 bt5 = Button(miFrame, text="5", width=3, command=lambda:numeroPulsado("5"))
 bt6 = Button(miFrame, text="6", width=3, command=lambda:numeroPulsado("6"))
-btMult = Button(miFrame, text="x", width=3, command=lambda:numeroPulsado("0"))
+btMult = Button(miFrame, text="x", width=3, command=lambda:multi(numeroPantalla.get()))
 
 bt4.grid(row=4, column=1)
 bt5.grid(row=4, column=2)
