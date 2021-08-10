@@ -1,5 +1,4 @@
 from tkinter import *
-import tkinter
 
 root = Tk()
 root.geometry("250x250")
