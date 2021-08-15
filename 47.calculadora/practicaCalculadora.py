@@ -1,6 +1,7 @@
 from tkinter import *
 
 raiz=Tk()
+raiz.geometry("250x170")
 
 miFrame=Frame(raiz)
 
